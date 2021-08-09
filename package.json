@@ -1,0 +1,26 @@
+{
+  "name": "BleusEmployeeTracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bleufox/BleusEmployeeTracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bleufox/BleusEmployeeTracker/issues"
+  },
+  "homepage": "https://github.com/bleufox/BleusEmployeeTracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.1.2",
+    "mysql2": "^2.2.5"
+  }
+}
