@@ -17,7 +17,7 @@ function mainMenu() {
         .prompt([
             {
                 type: 'list',
-                message: 'What do you want to do?',
+                message: 'Select from the options below:',
                 name: 'choice',
                 choices: [
                     {
@@ -96,34 +96,39 @@ const viewRoles = () => {
     // run database query to view departments
 }
 
-const viewRoles = () => {
-    db.query(`SELECT * FROM role`, (err, data) => {
-        if (err) {
-            throw err
-        } else {
-            console.table(data);
-            mainMenu();
+const newDepartment = () => {
+    inquirer
+        .prompt({
+            name: 'New Department Name',
+            message: 'Please provide the name of the new department.'
+        }).then(function (response) {
+            db.query(`INSERT INTO department (department_name) VALUES (?)`, (err, data) => {
+                if (err) {
+                    throw err
+                } else {
+                    console.table(data);
+                    mainMenu();
+                }
+            })
+            // run database query to view departments
         }
-    })
-    // run database query to view departments
-}
-
-const viewRoles = () => {
-    db.query(`SELECT * FROM role`, (err, data) => {
-        if (err) {
-            throw err
-        } else {
-            console.table(data);
-            mainMenu();
-        }
-    })
-    // run database query to view departments
-}
+,)}
+// const viewRoles = () => {
+//         db.query(`SELECT * FROM role`, (err, data) => {
+//             if (err) {
+//                 throw err
+//             } else {
+//                 console.table(data);
+//                 mainMenu();
+//             }
+//         })
+//         // run database query to view departments
+//     }
 
 
 
-// function viewRoles() {
-//     // run this query
-// }
+    // function viewRoles() {
+    //     // run this query
+    // }
 
-mainMenu();
+    mainMenu();
