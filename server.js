@@ -81,7 +81,6 @@ const viewDepartments = () => {
             mainMenu();
         }
     })
-    // run database query to view departments
 }
 
 const viewRoles = () => {
@@ -93,42 +92,44 @@ const viewRoles = () => {
             mainMenu();
         }
     })
-    // run database query to view departments
 }
 
 const newDepartment = () => {
     inquirer
         .prompt({
-            name: 'New Department Name',
+            name: 'department',
             message: 'Please provide the name of the new department.'
         }).then(function (response) {
-            db.query(`INSERT INTO department (department_name) VALUES (?)`, (err, data) => {
+            db.query(`INSERT INTO department (department_name) VALUES (?)`, response.department, (err) => {
                 if (err) {
                     throw err
-                } else {
-                    console.table(data);
+                }
+                else {
+                    viewDepartments();
                     mainMenu();
                 }
             })
-            // run database query to view departments
         }
-,)}
-// const viewRoles = () => {
-//         db.query(`SELECT * FROM role`, (err, data) => {
-//             if (err) {
-//                 throw err
-//             } else {
-//                 console.table(data);
-//                 mainMenu();
-//             }
-//         })
-//         // run database query to view departments
-//     }
+,)
+}
 
+const newRole = () => {
+    inquirer
+        .prompt({
+            name: 'role',
+            message: 'Please provide the title and salary of the new role.'
+        }).then(function (response) {
+            db.query(`INSERT INTO role (title, salary) VALUES (?)`, response.role, (err) => {
+                if (err) {
+                    throw err
+                }
+                else {
+                    viewRoles();
+                    mainMenu();
+                }
+            })
+        }
+,)
+}
 
-
-    // function viewRoles() {
-    //     // run this query
-    // }
-
-    mainMenu();
+mainMenu();
