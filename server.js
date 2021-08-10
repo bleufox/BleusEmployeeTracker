@@ -119,7 +119,7 @@ const newRole = () => {
             name: 'role',
             message: 'Please provide the title and salary of the new role.'
         }).then(function (response) {
-            db.query(`INSERT INTO role (title, salary) VALUES (?)`, response.role, (err) => {
+            db.query(`INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)`, response.title, response.salary, response.department_id, (err) => {
                 if (err) {
                     throw err
                 }
