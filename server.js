@@ -122,12 +122,12 @@ const newDepartment = () => {
             name: 'department',
             message: 'Please provide the name of the new department.'
         }).then(function (response) {
-            db.query(`INSERT INTO department (department_name) VALUES (?)`, response.department, (err) => {
+            db.query(`INSERT INTO department (department_name) VALUES (?)`, response.department, (err, data) => {
                 if (err) {
                     throw err
                 }
                 else {
-                    viewDepartments();
+                    console.table(data)
                     mainMenu();
                 }
             })
@@ -172,7 +172,6 @@ const newRole = () => {
                             if (err) {
                                 throw err
                             } else {
-                                viewRoles();
                                 mainMenu();
                             }
                         }
@@ -247,7 +246,6 @@ const newEmployee = () => {
                                             if (err) {
                                                 throw err
                                             } else {
-                                                viewEmployees();
                                                 mainMenu();
                                             }
                                         }
