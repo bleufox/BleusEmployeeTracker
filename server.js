@@ -159,7 +159,7 @@ const newRole = () => {
                         departmentArray.push(department_name)
                     })
                     return departmentArray;
-                }
+                },
             },
         ])
             .then(response => {
