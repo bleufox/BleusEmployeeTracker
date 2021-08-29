@@ -37,7 +37,7 @@ node server
 ===================================================
 
 ## Walkthrough Video Link
-[Bleu's ReadMe Generator Walkthrough Video](https://www.loom.com/share/3c5abe60a3064b2f84f3145bce6f0b40)
+[Bleu's Employee Tracker Walkthrough Video](https://www.loom.com/share/a01adb813508499a831ca0f646ba7e1b)
 
 ## Technologies Used
 * Javascript, SQL

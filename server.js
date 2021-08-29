@@ -127,7 +127,7 @@ const newDepartment = () => {
                     throw err
                 }
                 else {
-                    console.table(data)
+                    // console.table(data)
                     mainMenu();
                 }
             })
