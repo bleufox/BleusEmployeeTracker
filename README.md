@@ -36,11 +36,14 @@ node server
 ![Screenshot](/assets/images/add-role.png)
 ===================================================
 
-## Walk-Through Video
+## Walkthrough Video Link
+[Bleu's ReadMe Generator Walkthrough Video](https://www.loom.com/share/3c5abe60a3064b2f84f3145bce6f0b40)
 
+## Technologies Used
+* Javascript, SQL
 
 ## Repository
-https://bleufox.github.io/BleusEmployeeTracker/
+* GitHub Repo: https://bleufox.github.io/BleusEmployeeTracker/
 
 ## Creator
 Ashley Jones, Full Stack Developer Student
