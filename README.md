@@ -36,5 +36,13 @@ node server
 ![Screenshot](/assets/images/add-role.png)
 ===================================================
 
-## Repository
+## Walk-Through Video
 
+
+## Repository
+https://bleufox.github.io/BleusEmployeeTracker/
+
+## Creator
+Ashley Jones, Full Stack Developer Student
+* Email: thebleufox8@gmail.com
+* GitHub: https://github.com/bleufox
